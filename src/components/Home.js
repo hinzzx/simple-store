@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { MainContainer, Article, Header1 } from "../styles/Home.styles";
 import { motion } from "framer-motion";
-import Axios from "axios";
+import axios from 'axios';
 
 const Home = () => {
   // fetch('https://fakestoreapi.com/products')
@@ -12,7 +12,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    Axios.get("https://fakestoreapi.com/products")
+    axios.get("https://fakestoreapi.com/products")
       .then((res) => {
         setProducts(res.data);
       })
