@@ -5,11 +5,10 @@ import {
   Section,
   Paragraph,
   HomeImage,
-  HomeImage2,
   Header1,
   Button,
 } from "../styles/Home.styles";
-import HOMEIMAGE from "../assets/HOMEIMAGE.png";
+
 import HOMEIMAGETest from "../assets/HOMEIMAGETest.png";
 import { motion } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
