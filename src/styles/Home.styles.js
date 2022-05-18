@@ -79,16 +79,26 @@ export const Header1 = styled.h1`
 `;
 
 export const HomeImage = styled.img`
-  width: 85%;
+  width: 80%;
   max-width: 1010px;
   max-height: 591px;
   margin-left: 4%;
   margin-right: 5%;
 
+  /* Added this cause it has some issues on Chrome browser */
+
+  @media (max-width: 1400px) {
+    
+    margin-right: 12%;
+  }
+
   @media (max-width: 1015px) {
+      
     margin-left: 0%;
     margin-top: 4%;
   }
+
+
 `;
 
 export const HomeImage2 = styled.img`
