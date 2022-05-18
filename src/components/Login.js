@@ -41,7 +41,7 @@ const Login = () => {
     <Container>
       <LoginPictureContainer
         as={motion.img}
-        initial={{ x: -100, opacity: 0.6 }}
+        initial={{ x: -100, opacity: 0.5 }}
         animate={{ x: 0, opacity: 1 }}
         src={LOGINPIC}
       />
