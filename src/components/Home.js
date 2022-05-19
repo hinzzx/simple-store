@@ -7,8 +7,9 @@ import {
   HomeImage,
   Header1,
   Button,
+  
 } from "../styles/Home.styles";
-
+import { Link } from "react-router-dom";
 import HOMEIMAGETest from "../assets/HOMEIMAGETest.png";
 import { motion } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -45,7 +46,7 @@ const Home = () => {
               transition={{ delay: 1.2 }}
             >
               {" "}
-              Start shopping <AiOutlineArrowRight />{" "}
+              <Link to="/productz">Start shopping <AiOutlineArrowRight /></Link>{" "}
             </Button>
           </Paragraph>
 
@@ -53,21 +54,7 @@ const Home = () => {
           
         </Section>
       </Container>
-      {/* Second Parallax Container here */}
-      <Container>
-        <Section>
-          <Paragraph>
-            <Header1
-              as={motion.h1}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1.3 }}
-            >
-              TEST HEADER 123
-            </Header1>
-          </Paragraph>
-        </Section>
-      </Container>
+    
     </MainContainer>
   );
 };

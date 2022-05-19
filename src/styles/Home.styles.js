@@ -1,45 +1,68 @@
 import styled from "styled-components";
+// import { Link } from "react-router-dom";
 
 
 // Main Container // Content wrapper
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: calc(100vh - 60px); // because of the navbar
+  height: 100vh; // because of the navbar
   background-color: #f5f5f5;
-  margin-top: 60px; // because of the navbar
-  overflow: auto;
-  overflow-x: hidden;
+   // because of the navbar
+  overflow: hidden;
+  overflow-y: hidden;
+  
+  
 
   /* Little parallax effect */
 
-  & div {
-    height: 100%;
-    width: 100%;
-    flex-shrink: 0;
-    object-fit: cover;
-    position: sticky;
-    top: 0;
-  }
+  
+
+  &:-webkit-scrollbar {
+    overflow: hidden;
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+& {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 `;
 
 export const Section = styled.section`
   display: flex;
-  width: fit-content;
+  width: 90%;
   position: absolute;
   margin: auto;
-  top: 10%;
+  top: 20%;
   left: 10%;
   height: fit-content;
   white-space: pre-line;
 
   @media (max-width: 1015px) {
     flex-direction: column;
+    top: 11%;
   }
+
+  
+
+  &:-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+& {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 `;
 
 export const Paragraph = styled.p`
+  width: fit-content;
   font-size: 1rem;
   color: white;
   margin: 0;
@@ -50,14 +73,15 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 100%;
   height: 100%;
   padding: 20px;
   background-color: #00d49b;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 10px 10px;
-  margin-bottom: 20px;
-  overflow: auto;
+  
+  
 `;
 
 // Header
@@ -74,14 +98,18 @@ export const Header1 = styled.h1`
   white-space: pre-line;
 
     @media (max-width: 650px) {
-        width: 90%;
+        width: 80%;
+    }
+
+    @media (max-width: 300px) {
+      font-size: 2rem;
     }
 `;
 
 export const HomeImage = styled.img`
-  width: 80%;
+  width: 46%;
   max-width: 1010px;
-  max-height: 591px;
+  max-height: 617px;
   margin-left: 4%;
   margin-right: 5%;
 
@@ -94,8 +122,14 @@ export const HomeImage = styled.img`
 
   @media (max-width: 1015px) {
       
+    width: 80%;
     margin-left: 0%;
-    margin-top: 4%;
+    margin-top: 6%;
+  }
+
+  @media (max-width: 768px) {
+   
+    margin-right: 25%;
   }
 
 
@@ -131,7 +165,17 @@ export const Button = styled.button`
       cursor: pointer;
   }
 
+  & a {
+    text-decoration: none;
+    color: #00d49b;
+  }
+
+  &:hover a {
+    color: white;
+  }
   
 `;
+
+
 
 

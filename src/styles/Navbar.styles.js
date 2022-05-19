@@ -14,7 +14,7 @@ export const NavbarContainer = styled.nav`
   display: flex;
   flex-direction: column;
   z-index: 10;
-  @media (min-width: 700px) {
+  @media (min-width: 720px) {
     height: 60px;
   }
 

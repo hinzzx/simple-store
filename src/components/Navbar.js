@@ -31,7 +31,7 @@ const Navbar = () => {
         <NavbarLinkContainer> 
           {/* Navigation menu */}
             <NavbarLink to="/"> Home</NavbarLink>
-            <NavbarLink to="/products" > Products</NavbarLink>
+            <NavbarLink to="/productz" > Products</NavbarLink>
             <NavbarLink to="/contact"> Contact Us</NavbarLink>
             <NavbarLink to="/about"> About Us</NavbarLink>
             {/* Account button components */}
