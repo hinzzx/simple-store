@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const colors = {
-  primary: "#00d49b"
+  primary: "#00d49b",
 };
 
 export const NavbarContainer = styled.nav`
@@ -17,7 +17,6 @@ export const NavbarContainer = styled.nav`
   @media (min-width: 720px) {
     height: 60px;
   }
-
 `;
 
 export const RightContainer = styled.div`

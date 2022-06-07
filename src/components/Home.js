@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import HOMEIMAGETest from "../assets/HOMEIMAGETest.png";
 import { motion } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -53,8 +54,10 @@ const Home = () => {
           <HomeImage src={HOMEIMAGETest} alt="" as={motion.img} />
           
         </Section>
+
+        
       </Container>
-    
+    <Footer />
     </MainContainer>
   );
 };

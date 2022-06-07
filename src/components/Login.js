@@ -18,6 +18,8 @@ import LOGINPIC from "../assets/LOGINPIC.jpg";
 import {Link} from "react-router-dom";
 import {FcGoogle} from 'react-icons/fc'
 import {BsFacebook, BsLinkedin} from 'react-icons/bs'
+import { AiOutlineMinus } from "react-icons/ai";
+
 
 
 const Login = () => {
@@ -44,6 +46,8 @@ const Login = () => {
         initial={{ x: -100, opacity: 0.5 }}
         animate={{ x: 0, opacity: 1 }}
         src={LOGINPIC}
+
+
       />
       <LoginForm
         as={motion.form}
@@ -70,7 +74,9 @@ const Login = () => {
         </FormInputWrapper>
         {/* Username input field */}
         <FormInputWrapper>
-          {showOne ? <Label as={motion.label} initial={{x: -100}} animate={{x: 0}}> Username</Label> : null}
+          {showOne ? <Label as={motion.label} 
+          initial={{x: -100}} 
+          animate={{x: 0}}> Username</Label> : null}
           <FormInput 
             onFocus={() => {
               setShowOne((current) => !current);
@@ -109,7 +115,7 @@ const Login = () => {
 
         {/* The text - "Or try to sign-in with - ggle, fb, etc.." */}
         <TextInALine>
-          <span> Or try to Sign-in with </span>
+          <span> <AiOutlineMinus /> Or try to Sign-in with <AiOutlineMinus /> </span>
         </TextInALine>
 
         <Buttons>
@@ -120,6 +126,8 @@ const Login = () => {
         </Buttons>
         
       </LoginForm>
+
+     
     </Container>
   );
 };

@@ -7,6 +7,26 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 99vh;
+  padding-bottom: 9px;
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  @media (max-width: 1110px) {
+    background-image: url('https://images.pexels.com/photos/5039602/pexels-photo-5039602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 99vh;
+    filter: brightness(90%);
+   
+  }
+
+  @media (max-width: 768px) {
+    height: 98.9vh;
+  }
+
+ 
 `;
 
 export const LoginPictureContainer = styled.img`
@@ -21,7 +41,7 @@ export const LoginPictureContainer = styled.img`
 `;
 
 export const LoginForm = styled.form`
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #fff;
 
   display: flex;
   flex-direction: column;
@@ -34,24 +54,43 @@ export const LoginForm = styled.form`
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
   background: #fff;
 
   @media screen and (max-width: 1110px) {
     max-width: 600px;
     min-width: 300px;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.27);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+  
+
+  & p span {
+    background-color: transparent;
+    z-index: 2;
+    white-space: nowrap;
+  }
+
+  & input::placeholder {
+    color: #fff;
+  }
   }
 `;
 
 export const FormTitle = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: 400;
   text-align: left;
+
+  @media screen and (max-width: 1110px) {
+    color: #F7F7F5;
+  }
   
   
 `;
@@ -60,12 +99,23 @@ export const FormInput = styled.input`
   width: 50%;
   height: 40px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: none;
   padding: 0 10px;
   margin: 10px 0;
+  background: rgba(255, 255, 255, 0.27);
+border-radius: 10px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.6px);
+-webkit-backdrop-filter: blur(10.6px);
+
 
  &:focus::placeholder {
     color: transparent;
+}
+
+@media screen and (max-width: 1110px) {
+  background: rgba(255, 255, 255, 0.27);
+  border: none;
 }
 
   
@@ -86,6 +136,10 @@ export const Label = styled.label`
   text-align: left;
   font-size: 0.75em;
   margin-bottom: -6px;
+  
+  @media screen and (max-width: 1110px) {
+    color: white;
+  }
 
 `;
 
@@ -114,16 +168,20 @@ export const Submit = styled.button`
 `;
 
 export const TextInALine = styled.p`
-  width: 55%;
+  width: 60%;
   text-align: center;
-  border-bottom: 1px solid #000;
   line-height: 0.1em;
   margin-top: 2rem;
   font-size: 0.8em;
+  
 
   & span {
     background: #fff;
     padding: 0 10px;
+  }
+
+  @media screen and (max-width: 1110px) {
+    color: white;
   }
 `;
 

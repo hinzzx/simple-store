@@ -31,12 +31,12 @@ const Navbar = () => {
         <NavbarLinkContainer> 
           {/* Navigation menu */}
             <NavbarLink to="/"> Home</NavbarLink>
-            <NavbarLink to="/productz" > Products</NavbarLink>
+            <NavbarLink to="/products" > Products</NavbarLink>
             <NavbarLink to="/contact"> Contact Us</NavbarLink>
             <NavbarLink to="/about"> About Us</NavbarLink>
             {/* Account button components */}
-            <NavbarLink to="/signup"> <VscAccount style={{fontSize: "1rem"}}/></NavbarLink>
-            <NavbarLink to="/logout"> <VscSignOut style={{fontSize: "1rem"}}/></NavbarLink>
+            <NavbarLink to="/signup"> <VscAccount style={{width: "1rem", height: "1rem"}}/></NavbarLink>
+            <NavbarLink to="/logout"> <VscSignOut style={{width: "1rem", height: "1rem", marginLeft: "-0.567rem"}}/></NavbarLink>
 
             <OpenLinksButton
               onClick={() => {
@@ -61,8 +61,8 @@ const Navbar = () => {
           <NavbarLinkExtended to="/about" onClick={() => {setExtendNavbar((curr) => !curr)}}> About Us</NavbarLinkExtended>
           {/* Account button components */}
           <div>
-          <NavbarLinkExtended to="/signup" onClick={() => {setExtendNavbar((curr) => !curr)}}> <VscAccount style={{fontSize: "1rem"}}/></NavbarLinkExtended>
-            <NavbarLinkExtended to="/logout" onClick={() => {setExtendNavbar((curr) => !curr)}}> <VscSignOut style={{fontSize: "1rem"}}/></NavbarLinkExtended>
+          <NavbarLinkExtended to="/signup" onClick={() => {setExtendNavbar((curr) => !curr)}}> <VscAccount style={{width: "1.3rem", height: "1.3rem"}}/></NavbarLinkExtended>
+            <NavbarLinkExtended to="/logout" onClick={() => {setExtendNavbar((curr) => !curr)}}> <VscSignOut style={{width: "1.3rem", height: "1.3rem"}}/></NavbarLinkExtended>
           </div>
          
           

@@ -76,10 +76,10 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  
   background-color: #00d49b;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.1);
+
   
   
 `;
@@ -122,14 +122,15 @@ export const HomeImage = styled.img`
 
   @media (max-width: 1015px) {
       
-    width: 80%;
+    width: 70%;
     margin-left: 0%;
-    margin-top: 6%;
+    margin-top: -5%;
   }
 
   @media (max-width: 768px) {
    
     margin-right: 25%;
+    margin-top: 6%;
   }
 
 
